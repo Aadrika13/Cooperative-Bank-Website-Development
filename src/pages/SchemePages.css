@@ -1,0 +1,173 @@
+/* ===== SCHEME PAGES SHARED CSS ===== */
+.scheme-section { padding: 80px 0; background: var(--beige); }
+
+.scheme-intro {
+  display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;
+  margin-bottom: 50px; align-items: start;
+}
+
+.scheme-intro-text h2 {
+  font-size: 1.7rem; color: var(--maroon); font-weight: 800; margin-bottom: 8px;
+}
+
+.scheme-tagline {
+  font-size: 1rem; color: var(--gold); font-weight: 600; margin-bottom: 14px !important;
+}
+
+.scheme-intro-text p {
+  font-size: 0.92rem; color: var(--text-medium); line-height: 1.8; margin-bottom: 12px;
+}
+
+.rate-badges {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px;
+}
+
+.senior-citizen-notice {
+  background: linear-gradient(90deg, rgba(201, 150, 58, 0.18), rgba(123, 28, 46, 0.08));
+  border-left: 4px solid var(--gold);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: var(--maroon);
+}
+
+.rate-badge-item {
+  background: rgba(123,28,46,0.08); border: 1px solid rgba(123,28,46,0.2);
+  color: var(--maroon); font-size: 0.8rem; font-weight: 700; padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.featured-badge {
+  background: var(--maroon); color: var(--white); border-color: var(--maroon);
+}
+
+.scheme-highlights {
+  background: var(--white); border-radius: var(--radius-md);
+  padding: 28px; box-shadow: var(--shadow-sm); border: 1px solid rgba(123,28,46,0.1);
+}
+
+.scheme-highlights h3 {
+  font-size: 1rem; color: var(--maroon); font-weight: 700; margin-bottom: 16px;
+  padding-bottom: 10px; border-bottom: 2px solid var(--beige-dark);
+}
+
+.features-list { display: flex; flex-direction: column; gap: 10px; }
+.features-list li {
+  font-size: 0.88rem; color: var(--text-dark); padding: 4px 0;
+  border-bottom: 1px solid var(--beige);
+}
+
+/* Table */
+.scheme-table-wrapper {
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 32px; box-shadow: var(--shadow-md); margin-bottom: 40px;
+  border: 1px solid rgba(123,28,46,0.1);
+}
+
+.table-title {
+  font-size: 1.3rem; color: var(--maroon); font-weight: 700; margin-bottom: 6px;
+}
+
+.table-subtitle {
+  font-size: 0.85rem; color: var(--text-light); margin-bottom: 20px;
+}
+
+.table-scroll { overflow-x: auto; }
+
+/* Terms */
+.scheme-terms {
+  background: var(--white); border-radius: var(--radius-md);
+  padding: 32px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--maroon);
+}
+
+.scheme-terms h3 {
+  font-size: 1.2rem; color: var(--maroon); font-weight: 700; margin-bottom: 20px;
+}
+
+.terms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+.term-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--beige); border-radius: var(--radius-sm); padding: 14px;
+  border: 1px solid rgba(123,28,46,0.08);
+}
+
+.term-icon { font-size: 1.1rem; flex-shrink: 0; }
+.term-item p { font-size: 0.83rem; color: var(--text-medium); line-height: 1.6; }
+
+/* Saving Account specific */
+.saving-features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+.sf-card {
+  background: var(--white); border-radius: var(--radius-md); padding: 24px; text-align: center;
+  border: 1px solid rgba(123,28,46,0.1); transition: var(--transition);
+}
+.sf-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.sf-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.sf-card h4 { color: var(--maroon); font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.sf-card p { font-size: 0.82rem; color: var(--text-medium); line-height: 1.5; }
+
+/* Fixed Deposit */
+.fd-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.fd-tab {
+  padding: 8px 18px; border-radius: var(--radius-sm); border: 2px solid var(--maroon);
+  background: transparent; color: var(--maroon); cursor: pointer; font-size: 0.85rem;
+  font-weight: 600; transition: var(--transition);
+}
+.fd-tab.active { background: var(--maroon); color: var(--white); }
+.fd-tab:hover { background: var(--maroon); color: var(--white); }
+
+/* How It Works */
+.how-it-works {
+  background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+  border-radius: var(--radius-lg); padding: 36px; margin-bottom: 40px; color: var(--white);
+}
+.how-it-works h3 { color: var(--gold-light); font-size: 1.3rem; font-weight: 700; margin-bottom: 28px; }
+.hiw-steps { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hiw-step {
+  flex: 1; min-width: 160px; background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-md); padding: 22px 18px; text-align: center;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.step-num {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gold); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; font-weight: 800; margin: 0 auto 12px;
+}
+.hiw-step h4 { color: var(--gold-light); font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.hiw-step p { color: rgba(255,255,255,0.75); font-size: 0.82rem; line-height: 1.5; }
+.hiw-arrow { color: var(--gold-light); font-size: 1.5rem; font-weight: 900; }
+
+/* Loan Pages */
+.loan-types-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 40px; }
+.loan-type-card {
+  background: var(--white); border-radius: var(--radius-md); padding: 24px;
+  text-align: center; border: 1px solid rgba(123,28,46,0.1); cursor: pointer;
+  transition: var(--transition);
+}
+.loan-type-card:hover, .loan-type-card.active {
+  background: var(--maroon); color: var(--white); transform: translateY(-4px);
+}
+.loan-type-card:hover h4, .loan-type-card.active h4 { color: var(--gold-light); }
+.loan-type-card span { font-size: 2rem; display: block; margin-bottom: 10px; }
+.loan-type-card h4 { font-size: 1rem; font-weight: 700; color: var(--maroon); margin-bottom: 4px; }
+.loan-type-card p { font-size: 0.8rem; color: var(--text-medium); }
+.loan-type-card:hover p, .loan-type-card.active p { color: rgba(255,255,255,0.75); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .scheme-intro { grid-template-columns: 1fr; }
+  .saving-features-grid { grid-template-columns: repeat(2,1fr); }
+  .loan-types-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .terms-grid { grid-template-columns: 1fr; }
+  .saving-features-grid { grid-template-columns: 1fr; }
+  .hiw-steps { flex-direction: column; }
+  .hiw-arrow { transform: rotate(90deg); }
+}
+@media (max-width: 480px) {
+  .scheme-table-wrapper { padding: 16px; }
+  .scheme-section { padding: 50px 0; }
+}

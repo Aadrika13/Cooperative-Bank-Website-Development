@@ -1,0 +1,61 @@
+.career-hero { padding: 80px 0; background: var(--beige); }
+.career-hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: start; }
+.career-hero-grid h2 { font-size: 2rem; color: var(--maroon); font-weight: 800; margin-bottom: 8px; }
+.career-subtitle { color: var(--gold); font-size: 1rem; font-weight: 600; margin-bottom: 14px; }
+.career-hero-grid > div > p { font-size: 0.92rem; color: var(--text-medium); line-height: 1.8; margin-bottom: 10px; }
+
+.career-benefits-card {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  border-radius: var(--radius-lg); padding: 28px; color: var(--white);
+}
+.career-benefits-card h3 { font-size: 1rem; color: var(--gold-light); font-weight: 700; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+.career-benefits-list { display: flex; flex-direction: column; gap: 10px; }
+.career-benefits-list li { font-size: 0.88rem; color: rgba(255,255,255,0.85); }
+
+.openings-section { padding: 80px 0; background: var(--white); }
+.openings-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 40px; }
+
+.job-card {
+  background: var(--beige); border-radius: var(--radius-lg); padding: 28px;
+  border: 1px solid rgba(123,28,46,0.1); transition: var(--transition);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.job-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+
+.job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.job-header h3 { font-size: 1.1rem; font-weight: 700; color: var(--maroon); }
+.job-hindi { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-top: 2px; }
+.job-type-badge {
+  background: var(--maroon); color: var(--white); font-size: 0.72rem; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0;
+}
+
+.job-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.job-meta span { font-size: 0.82rem; color: var(--text-light); display: flex; align-items: center; gap: 4px; }
+.job-desc { font-size: 0.85rem; color: var(--text-medium); line-height: 1.6; }
+
+.job-skills { display: flex; gap: 8px; flex-wrap: wrap; }
+.skill-tag {
+  background: var(--white); border: 1px solid rgba(123,28,46,0.2);
+  color: var(--maroon); font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+}
+
+.apply-btn { align-self: flex-start; font-size: 0.9rem; padding: 10px 20px; }
+
+.general-apply {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+  border-radius: var(--radius-lg); padding: 36px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  flex-wrap: wrap;
+}
+.general-apply-content h3 { font-size: 1.3rem; color: var(--gold-light); font-weight: 700; margin-bottom: 8px; }
+.general-apply-content p { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-bottom: 6px; }
+.hindi-text { color: rgba(255,255,255,0.6) !important; font-style: italic; }
+
+@media (max-width: 1024px) {
+  .career-hero-grid { grid-template-columns: 1fr; }
+  .openings-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .general-apply { flex-direction: column; }
+}
