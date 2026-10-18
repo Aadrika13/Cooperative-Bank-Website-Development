@@ -1,19 +1,58 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', phone: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const mailBody = `Name: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0ASubject: ${form.subject}%0AMessage: ${form.message}`;
-    window.open(`mailto:mahilakalyanbachatsakhsehkarim@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${mailBody}`);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-  };
+  
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      setSending(true);
+      setSubmitted(false);
+      setError('');
+
+      try {
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            to_email: 'mahilakalyanbachatsakhsehkarim@gmail.com',
+            from_name: form.name,
+            from_phone: form.phone,
+            reply_to: form.email,
+            subject: form.subject,
+            message: form.message,
+          },
+          {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          }
+        );
+
+        setSubmitted(true);
+        setForm({
+          name: '',
+          phone: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } catch (err) {
+        console.error('Email sending failed:', err);
+        setError(
+          err?.text || 'Unable to send your message right now. Please try again later.'
+        );
+      } finally {
+        setSending(false);
+      }
+    };
+
 
   return (
     <div>
@@ -84,8 +123,15 @@ const Contact = () => {
               <p className="form-subtitle">हमें संदेश भेजें — हम जल्द उत्तर देंगे</p>
 
               {submitted && (
-                <div className="success-msg">
-                  ✅ Your message has been sent! We'll get back to you soon.
+                <div className="success-msg" role="status">
+                  ✅ Your message has been sent successfully!
+                  We'll get back to you soon.
+                </div>
+              )}
+
+              {error && (
+                <div className="error-msg" role="alert">
+                  ❌ {error}
                 </div>
               )}
 
@@ -122,8 +168,12 @@ const Contact = () => {
                   <label>Message — संदेश *</label>
                   <textarea name="message" rows="5" placeholder="Write your message here..." value={form.message} onChange={handleChange} required></textarea>
                 </div>
-                <button type="submit" className="btn-primary form-submit-btn">
-                  Send Message — भेजें →
+                <button
+                  type="submit"
+                  className="btn-primary form-submit-btn"
+                  disabled={sending}
+                >
+                  {sending ? 'Sending...' : 'Send Message — भेजें →'}
                 </button>
               </form>
             </div>
