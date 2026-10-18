@@ -256,7 +256,7 @@ const Home = () => {
                 <span>📍</span>
                 <div>
                   <strong>पता / Address</strong>
-                  <p>Shikha Arcade, Near Kartar Bar, Roxy Pul, Jinsi Nala No. 4,<br/>Madhav Ganj, Lashkar, Gwalior, Madhya Pradesh — 474001</p>
+                  <p>Shikha Arcade, Near Kartar Hotel, Roxy Pul, Jinsi Nala No. 4,<br/>Madhav Ganj, Lashkar, Gwalior, Madhya Pradesh — 474001</p>
                   <p style={{ fontSize: '0.82rem', color: 'var(--text-light)', marginTop: '4px' }}>
                     शिखा आर्केड, करतार बार के पास, रॉक्सी पुल, जिंसी नाला नं. 4, माधव गंज, लश्कर-ग्वालियर (म.प्र.)
                   </p>

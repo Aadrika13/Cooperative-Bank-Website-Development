@@ -31,7 +31,7 @@ const Contact = () => {
               <div className="ci-icon">📍</div>
               <h3>Office Address</h3>
               <p className="ci-hindi">कार्यालय का पता</p>
-              <p>Shikha Arcade, Near Kartar Bar, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Lashkar, Gwalior (M.P.) — 474001</p>
+              <p>Shikha Arcade, Near Kartar Hotel, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Lashkar, Gwalior (M.P.) — 474001</p>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-light)', marginTop: '4px' }}>
                 शिखा आर्केड, करतार बार के पास, रॉक्सी पुल, जिंसी नाला नं. 4, माधव गंज, लश्कर-ग्वालियर (म.प्र.)
               </p>

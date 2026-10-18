@@ -2,8 +2,20 @@ import { useState, useEffect, useCallback } from 'react';
 import './About.css';
 
 const slides = [
-  ...Array.from({ length: 8 }, (_, i) => `/gallery/office-${i + 1}.jpg`),
-  ...Array.from({ length: 20 }, (_, i) => `/gallery/slide-${i + 1}.jpg`)
+  '/gallery/office-1.jpg',
+  '/gallery/office-4.jpg',
+  '/gallery/office-5.jpg',
+  '/gallery/office-6.jpg',
+  '/gallery/slide-1.jpg',
+  '/gallery/new-office-1.jpeg',
+  '/gallery/new-office-2.jpeg',
+  '/gallery/new-office-3.jpeg',
+  '/gallery/new-office-4.jpeg',
+  '/gallery/new-slide-1.jpeg',
+  '/gallery/new-slide-2.jpeg',
+  '/gallery/new-slide-3.jpeg',
+  '/gallery/new-slide-4.jpeg',
+  '/gallery/new-slide-5.jpeg'
 ];
 
 const About = () => {
@@ -275,7 +287,7 @@ const About = () => {
               <div className="reg-item">
                 <strong>Location</strong>
                 <span>
-                  Shikha Arcade, Near Kartar Bar, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Gwalior (M.P.) — 474001{' '}
+                  Shikha Arcade, Near Kartar Hotel, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Gwalior (M.P.) — 474001{' '}
                   <a
                     href="https://www.google.com/maps?q=26.193448,78.150164"
                     target="_blank"

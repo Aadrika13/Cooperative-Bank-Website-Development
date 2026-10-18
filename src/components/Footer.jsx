@@ -63,7 +63,7 @@ const Footer = () => {
                 <span className="fc-icon">📍</span>
                 <div>
                   <strong>पता / Address</strong>
-                  <p>Shikha Arcade, Near Kartar Bar, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Gwalior (M.P.) — 474001</p>
+                  <p>Shikha Arcade, Near Kartar Hotel, Roxy Pul, Jinsi Nala No. 4, Madhav Ganj, Gwalior (M.P.) — 474001</p>
                   <a
                     href="https://www.google.com/maps?q=26.193448,78.150164"
                     target="_blank"
