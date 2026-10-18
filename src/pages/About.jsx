@@ -1,7 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import './About.css';
 
-const slides = Array.from({ length: 20 }, (_, i) => `/gallery/slide-${i + 1}.jpg`);
+const slides = [
+  ...Array.from({ length: 8 }, (_, i) => `/gallery/office-${i + 1}.jpg`),
+  ...Array.from({ length: 20 }, (_, i) => `/gallery/slide-${i + 1}.jpg`)
+];
 
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -103,9 +106,9 @@ const About = () => {
       <section className="gallery-slideshow-section">
         <div className="container">
           <div className="section-title">
-            <h2>Society in Action — Photo Gallery</h2>
-            <div className="hindi-subtitle">संस्था की झलकियां एवं कार्यक्रम</div>
-            <p>Highlights from our Annual General Meetings, leadership gatherings, and member community events.</p>
+            <h2>Our Office & Society in Action</h2>
+            <div className="hindi-subtitle">हमारा कार्यालय एवं संस्था की झलकियां</div>
+            <p>A visual glimpse into our bank office, counters, team, leadership, and society events.</p>
           </div>
 
           <div
